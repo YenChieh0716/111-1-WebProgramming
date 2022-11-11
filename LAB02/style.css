@@ -1,0 +1,49 @@
+.left {
+    float: left;
+    width: 50%;
+    border-bottom: 10px;
+    border-color: black;
+}
+
+.left img {
+
+    width: 50%;
+    border: 1px solid black;
+}
+
+.right {
+    float: right;
+    width: 50%;
+}
+
+.right img {
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: sepia(100%);
+    width: 50%;
+    border: 1px solid black;
+}
+
+table tr th {
+    background-color: black;
+    font-weight: bold;
+    color: beige;
+    text-align: justify;
+}
+
+table tr th:first-child {
+    text-align: center;
+}
+
+.blank {
+    background-color: #E0E0E0;
+    color: black;
+}
+
+.write {
+    background-color: aliceblue;
+}
+
+td {
+    text-align: center;
+}

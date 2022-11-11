@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        canvas {
+            border: 1px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var redGamePiece, blueGamePiece, yellowGamePiece;
+        function startGame() {
+            redGamePiece = new component(75, 75, "red", 10, 10);
+            yellowGamePiece = new component(75, 75, "yellow", 50, 60);
+            blueGamePiece = new component(75, 75, "blue", 10, 220);
+            myGameArea.start();
+        }
+
+        var myGameArea = {
+            canvas: document.createElement("canvas"),
+            start: function () {
+                this.canvas.width = 480;
+                this.canvas.height = 270;
+                this.context = this.canvas.getContext("2d");
+                document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+                this.interval = setInterval(updateGameArea, 10);
+            },
+            clear: function () {
+                this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            }, width: 480
+        }
+
+        function component(width, height, color, x, y) {
+            this.width = width;
+            this.height = height;
+            this.x = x;
+            this.y = y;
+            this.speed = 1;
+            this.angle = Math.random() * 180;
+            this.update = function () {
+                ctx = myGameArea.context;
+                ctx.fillStyle = color;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+        }
+        var a = 1;
+        var b = 1;
+        function updateGameArea() {
+            myGameArea.clear();
+            const canvas = myGameArea.canvas;
+            const ctx = myGameArea.context;
+            // redGamePiece.x += 1;
+            // yellowGamePiece.x += 1;
+            // yellowGamePiece.y += 1;
+            // blueGamePiece.x += 1;
+            // blueGamePiece.y -= 1;
+
+            yellowGamePiece.update();
+            blueGamePiece.update();
+            if (redGamePiece.x + redGamePiece.width == myGameArea.width) {
+                a = -a;
+            }
+            else if (redGamePiece.x <= 0) {
+                a = -a;
+            }
+
+            //console.log(a, redGamePiece.x, myGameArea.width);
+            redGamePiece.x += redGamePiece.speed * a;
+            redGamePiece.update();
+            yellowGamePiece.update();
+            if (yellowGamePiece.x + yellowGamePiece.width >= canvas.width) {
+                yellowGamePiece.angle = 180 - yellowGamePiece.angle;
+            }
+            if (yellowGamePiece.x < 0) {
+                yellowGamePiece.angle = -(180 + yellowGamePiece.angle);
+            }
+            if (yellowGamePiece.y < 0 || yellowGamePiece.y + yellowGamePiece.height > canvas.height) {
+                yellowGamePiece.angle = -yellowGamePiece.angle;
+            }
+            yellowGamePiece.x += yellowGamePiece.speed * Math.cos(yellowGamePiece.angle * Math.PI / 180);
+            yellowGamePiece.y -= yellowGamePiece.speed * Math.sin(yellowGamePiece.angle * Math.PI / 180);
+
+            blueGamePiece.update();
+            if (blueGamePiece.x + blueGamePiece.width >= canvas.width) {
+                blueGamePiece.angle = 180 - blueGamePiece.angle;
+            }
+            if (blueGamePiece.x < 0) {
+                blueGamePiece.angle = -(180 + blueGamePiece.angle);
+            }
+            if (blueGamePiece.y < 0 || blueGamePiece.y > canvas.height - 10) {
+                blueGamePiece.angle = -blueGamePiece.angle;
+            }
+            blueGamePiece.x += blueGamePiece.speed * Math.cos(blueGamePiece.angle * Math.PI / 180);
+            blueGamePiece.y -= blueGamePiece.speed * Math.sin(blueGamePiece.angle * Math.PI / 180);
+        }
+
+        var started = 0;
+        function start() {
+            if (!started)
+                startGame();
+            else {
+                redGamePiece.speed = 1;
+                blueGamePiece.speed = 1;
+                yellowGamePiece.speed = 1;
+            }
+        }
+        function stop() {
+            redGamePiece.speed = 0;
+            blueGamePiece.speed = 0;
+            yellowGamePiece.speed = 0;
+        }
+        function reset() {
+            startGame();
+            stop();
+            started = 0;
+        }
+        //drawFrame();
+    </script>
+    <p>The three components moves by changing the x- and y-coordinates on every update.</p>
+    <div style="text-align:center;width:480px;">
+        <button onclick="start()">START</button><br><br>
+        <button onclick="stop()">STOP</button>
+        <button onclick="reset()">RESET</button><br><br>
+    </div>
+</body>
+
+</html>

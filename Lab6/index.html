@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=image.png, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="400" height="200" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+    <script>
+        function draw() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            var grd = ctx.createLinearGradient(0, 0, 150, 75);
+            grd.addColorStop(0, "white");
+            grd.addColorStop(1, "red");
+            ctx.fillStyle = grd;
+            ctx.fillRect(0, 0, 150, 75);
+            var d = document.getElementById("myCanvas");
+            var ctx = d.getContext("2d");
+            var grd = ctx.createLinearGradient(0, 0, 185, 0);
+            grd.addColorStop(0, "rgba(0,0,250,0.5)");
+            grd.addColorStop(1, "white");
+            ctx.fillStyle = grd;
+            ctx.fillRect(50, 30, 150, 75);
+            //line
+            var e = document.getElementById("myCanvas");
+            var ctx = e.getContext("2d");
+            ctx.strokeStyle = "#376b4d";
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(0, 80);
+            ctx.lineTo(45, 80);
+            ctx.lineTo(45, 110);
+            ctx.lineTo(180, 110);
+            ctx.stroke();
+            //text
+            ctx.font = "20px Arial";
+            ctx.fillStyle = "#fcba03";
+            ctx.fillText("Overlap", 65, 60);
+            //circle
+            ctx.strokeStyle = "purple";
+            ctx.beginPath();
+            ctx.arc(180, 30, 10, Math.PI * 0.5, Math.PI * 1, true);
+            ctx.stroke();
+        }
+    </script>
+    <input type="button" onclick="draw()" value="Draw">
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+
+</body>
+
+</html>

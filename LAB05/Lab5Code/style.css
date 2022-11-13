@@ -1,0 +1,22 @@
+/*write your style here*/
+table tr th {
+    background-color: blue;
+    font-weight: bold;
+    color: beige;
+    text-align: center;
+
+}
+
+table {
+    border: black 4px solid;
+}
+
+table tr th:first-child {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    background-color: yellow;
+    border: black 4px solid;
+}

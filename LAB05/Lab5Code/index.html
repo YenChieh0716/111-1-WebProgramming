@@ -1,0 +1,61 @@
+<!-- HTML Lab Assignment 5 -->
+<!-- Deadline: 2022-11-09 23:59 -->
+
+<!-- [10%] 1. A Table (3x3 cells) with two different background colors for <th> and <td> -->
+<!-- [20%] 2. Two buttons to control the width of the table (200px, 500 px) -->
+<!-- [20%] 3. Three buttons to control the border with and cell spacing of the table -->
+<!-- [20%] 4. Four buttons to control the background color of the table (will not affect the color of table headings)-->
+<!-- [20%] 5. A reset button to reset the style to the original.-->
+<!-- [10%] 6. Separate the JavaScript code from the html file and upload both files to github. (javascript in an external file) -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Write your Html code here -->
+    <script src="./script.js"></script>
+    <table id="table1" cellpadding="1" cellspacing="5" width="300">
+        <tr>
+            <th>Math</th>
+            <th>English</th>
+            <th>Programming</th>
+        </tr>
+
+        <tr>
+            <td>90</td>
+            <td>60</td>
+            <td>80</td>
+        </tr>
+
+        <tr>
+            <td>80</td>
+            <td>86</td>
+            <td>98</td>
+        </tr>
+
+    </table>
+
+    <p>Change The Table Width</p>
+    <input type="button" onclick="chgTableWidth200()" value="200px">
+    <input type="button" onclick="chgTableWidth500()" value="500px">
+
+    <p>Change The Border and the Spacing Width</p>
+    <input type="button" onclick="chgBSWidth1()" value="1px">
+    <input type="button" onclick="chgBSWidth10()" value="10px">
+    <input type="button" onclick="chgBSWidth20()" value="20px">
+    <p>Change The Table Color</p>
+    <input type="button" style="background-color: green; width:50px;" onclick="chgColorG()">
+    <input type="button" style="background-color: blue;width:50px;" onclick="chgColorB()" value="">
+    <input type="button" style="background-color: purple;width:50px;" onclick="chgColorP()" value="">
+    <input type="button" style="background-color: orange;width:50px;" onclick="chgColorO()" value="">
+    <br>
+    <input type="button" onclick="Reset()" value="Reset">
+</body>
+
+
+
+</html>

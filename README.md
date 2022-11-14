@@ -1,3 +1,3 @@
 # 111-1-WebProgramming task and lab assignment
 
-Lab5 https://github.com/YenChieh0716/111-1-WebProgramming/tree/main/LAB05/Lab5Code
+Lab5 https://yenchieh0716.github.io/111-1-WebProgramming/LAB05/Lab5Code/

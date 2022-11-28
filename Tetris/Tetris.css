@@ -6,6 +6,7 @@ body {
 
 canvas {
     position: relative;
+<<<<<<< HEAD
     left: 5px;
     top: 3px;
 }
@@ -13,6 +14,15 @@ canvas {
 .grid {
     width: 500px;
     height: 597px;
+=======
+    left: 356px;
+    top: 47px;
+}
+
+.grid {
+    width: 300px;
+    height: 595px;
+>>>>>>> 0530eed40575b8560c89aa8a8f76f910ebcd972d
     background-color: rgb(235, 235, 235);
     display: flex;
     flex-wrap: wrap;
@@ -25,7 +35,11 @@ canvas {
 
 #container {
     margin-top: 10vh;
+<<<<<<< HEAD
     border: #BFB8DA 5px solid;
+=======
+    border: rgb(88, 60, 77) 5px solid;
+>>>>>>> 0530eed40575b8560c89aa8a8f76f910ebcd972d
     display: flex;
 
 }
@@ -57,7 +71,10 @@ canvas {
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
     background-color: #E8B7D4;
+=======
+>>>>>>> 0530eed40575b8560c89aa8a8f76f910ebcd972d
 }
 
 h2 {
@@ -66,29 +83,46 @@ h2 {
 }
 
 h3 {
+<<<<<<< HEAD
     padding: 5px 5px 5px 5px;
     color: salmon;
     position: relative;
     right: 230px;
     top: -65px;
     /* border: #33539E solid 1px; */
+=======
+    padding: 10px 15px 10px 15px;
+    color: salmon;
+>>>>>>> 0530eed40575b8560c89aa8a8f76f910ebcd972d
 }
 
 .start {
     position: relative;
     border-radius: 5px;
+<<<<<<< HEAD
     border: #3675ad 3px solid;
     background-color: #7FACD6;
+=======
+    background-color: rgb(105, 66, 157);
+>>>>>>> 0530eed40575b8560c89aa8a8f76f910ebcd972d
     width: 50px;
     height: 40px;
     text-align: center;
     left: 50px;
+<<<<<<< HEAD
     top: 400px;
+=======
+    top: 370px;
+>>>>>>> 0530eed40575b8560c89aa8a8f76f910ebcd972d
     color: #f1f1f1;
 }
 
 .start:hover {
+<<<<<<< HEAD
     background: #33539E;
+=======
+    background: rgb(51, 13, 101);
+>>>>>>> 0530eed40575b8560c89aa8a8f76f910ebcd972d
     display: block;
     transition: all 0.8s;
 }

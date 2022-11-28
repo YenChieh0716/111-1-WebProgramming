@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="Tetris.css">
+
+    <script src="./Tetris copy 2.js"></script>
+</head>
+
+<body>
+    <button class="start" onclick="startGame()">
+        Start
+    </button>
+    <div id="container">
+        <div class="grid">
+            <div style="display: inline-block">
+                <canvas id="myCanvas" height="592" width="490"></canvas>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Score: <span id="score">0</span></h3>
+            <div class="intro">
+                <div class="keyBoard0" disabled>
+                    <button class="rotate" onclick="Rotate()">Rotate</button><span></span>
+                    <button class="restart" onclick="window.location.reload()">Reset</button>
+                </div>
+                <div class="keyBoard3" disabled>
+                    <div>
+                        <button class="leftForMobile" onclick="Left()">←</button>
+                        <P>Left</P>
+                    </div>
+                    <div>
+                        <button class="downForMobile" onclick="Down()">↓</button>
+                        <P>Down</P>
+                    </div>
+                    <div>
+                        <button class="rightForMobile" onclick="Right()">→</button>
+                        <P>Right</P>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

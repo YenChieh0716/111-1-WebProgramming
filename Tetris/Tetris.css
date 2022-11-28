@@ -1,0 +1,192 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+canvas {
+    position: relative;
+    left: 5px;
+    top: 3px;
+}
+
+.grid {
+    width: 500px;
+    height: 597px;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div {
+    height: 30px;
+    width: 30px;
+}
+
+#container {
+    margin-top: 10vh;
+    border: #BFB8DA 5px solid;
+    display: flex;
+
+}
+
+.tetromino {
+    border: solid 3px;
+    border-color: white gray gray white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.mini-grid {
+    margin: 0px 50px 10px 50px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: darkseagreen;
+    border: black 4px double;
+}
+
+.mini-grid div {
+    height: 30px;
+    width: 30px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E8B7D4;
+}
+
+h2 {
+    border: black 4px double;
+    padding: 10px 25px 10px 25px;
+}
+
+h3 {
+    padding: 5px 5px 5px 5px;
+    color: salmon;
+    position: relative;
+    right: 230px;
+    top: -65px;
+    /* border: #33539E solid 1px; */
+}
+
+.start {
+    position: relative;
+    border-radius: 5px;
+    border: #3675ad 3px solid;
+    background-color: #7FACD6;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    left: 50px;
+    top: 400px;
+    color: #f1f1f1;
+}
+
+.start:hover {
+    background: #33539E;
+    display: block;
+    transition: all 0.8s;
+}
+
+
+
+#start-button:after {
+    content: "";
+    background: rgb(51, 13, 101);
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+#start-button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.intro {
+    width: 75%;
+}
+
+.keyBoard0 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0 20px 0;
+}
+
+.keyBoard1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.keyBoard2 {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px 5px 0px;
+}
+
+.keyBoard3 {
+    display: flex;
+    justify-content: center;
+}
+
+.keyBoard3 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.keyBoard3 p {
+    margin-top: 5px;
+}
+
+.intro button {
+    height: 35px;
+    width: 35px;
+}
+
+.keyBoard0 button {
+    width: 70px;
+}
+
+.controller {
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px 15px 10px;
+}
+
+
+/*@media (max-width: 768px) {
+    .info {
+        display: none;
+    }
+  
+    .intro {
+        justify-content: center;
+    }
+  
+    #container {
+        flex-direction: column;
+    }
+}
+  
+@media screen and (min-width: 768px) {
+    .controller {
+        display: none;
+    }
+}*/

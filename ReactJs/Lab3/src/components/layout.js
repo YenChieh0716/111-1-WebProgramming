@@ -8,12 +8,12 @@ function Layout() {
             <Sidebar>
                 <Menu>
                     <MenuItem>
-                        <Link to="/">Home</Link>
+                        <Link style={{ textDecoration: 'none', color: 'black' }} to="/">Home</Link>
                     </MenuItem>
-                    <MenuItem> <Link to="/search">Search</Link>
+                    <MenuItem><Link style={{ textDecoration: 'none', color: 'black' }} to="/search">Search</Link>
                     </MenuItem>
                     <MenuItem>
-                        <Link to="/nothing-here">Nothing Here</Link>
+                        <Link style={{ textDecoration: 'none', color: 'black' }} to="/nothing-here">Nothing Here</Link>
                     </MenuItem>
                 </Menu>
             </Sidebar>

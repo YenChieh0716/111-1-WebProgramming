@@ -20,7 +20,6 @@ function Layout() {
             <hr />
             <Outlet />
         </div>
-
     );
 }
 
